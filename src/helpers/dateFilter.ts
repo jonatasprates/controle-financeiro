@@ -25,7 +25,7 @@ export const filterListByMonth = (list: Item[], date: string): Item[] => {
     return newList;
 }
 
-// Formatar data
+// Formatar data dia/mes/ano 04/05/2022
 export const formatDate = (date: Date): string => {
     let year = date.getFullYear();
     let month = date.getMonth() + 1;
@@ -36,3 +36,11 @@ export const formatDate = (date: Date): string => {
 
 // Adicionando zero na data
 const addZeroToDate = (n: number): string => n < 10 ? `0${n}` : `${n}`;
+
+// Formatar data mes ano Abril 2022
+export const formatCurrentMonth = (currentMonth: string): string => {
+    let [year, month] = currentMonth.split('-');
+    let months = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'];
+    return `${months[parseInt(month) - 1]} ${year}`;
+
+}
