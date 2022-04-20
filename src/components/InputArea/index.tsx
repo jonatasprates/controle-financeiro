@@ -10,10 +10,10 @@ type Props = {
 };
 
 export const InputArea = ({ onAdd }: Props) => {
-  const [dateField, setDateField] = useState('');
-  const [categoryField, setCategoryField] = useState('');
-  const [titleField, setTitleField] = useState('');
-  const [valueField, setValueField] = useState(0);
+  const [dateField, setDateField] = useState<string>('');
+  const [categoryField, setCategoryField] = useState<string>('');
+  const [titleField, setTitleField] = useState<string>('');
+  const [valueField, setValueField] = useState<number>(0);
 
   let categoryKeys: string[] = Object.keys(categories);
 
